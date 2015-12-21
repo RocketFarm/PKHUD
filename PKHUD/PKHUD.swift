@@ -60,6 +60,8 @@ public class PKHUD: NSObject {
     }
     
     public func show() {
+		hideTimer?.invalidate()
+		
         window.showFrameView()
         if dimsBackground {
             window.showBackground(animated: true)
